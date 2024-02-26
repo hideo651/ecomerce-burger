@@ -1,0 +1,12 @@
+header {
+  text-align: center;
+  margin: 0px auto;
+  padding: 20px;
+  box-shadow: 0px 4px 40px -20px #00000040;
+}
+
+h1 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 2rem;
+}
