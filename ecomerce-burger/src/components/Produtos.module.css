@@ -32,7 +32,15 @@ ul {
 }
 
 .carrinho {
-  padding-bottom: 100px;
-  background: #fafafa;
   max-height: 400px;
+  min-height: 400px;
+}
+
+.bagTotal {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  font-family: "Poppins";
 }

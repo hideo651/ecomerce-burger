@@ -22,3 +22,59 @@
   font-weight: 400;
   font-size: 14px;
 }
+
+.bagContent {
+  overflow: auto;
+  max-height: 400px;
+  height: 100%;
+  overflow-y: scroll;
+  background: #fafafa;
+}
+
+.bagItens {
+  display: flex;
+  overflow: auto;
+}
+
+.bagItens > li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.content {
+  display: flex;
+  gap: 5px;
+}
+
+.content > img {
+  width: 150px;
+}
+
+.bagInfo {
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bagInfo > span {
+  font-weight: 400;
+  font-size: 12px;
+  color: #868e96;
+}
+
+.bagInfo > p {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.btnDelete {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+}

@@ -7,16 +7,21 @@ import { GlobalContext } from "../context/GlobalContext";
 import Carrinho from "./Carrinho/Carrinho";
 
 const Produtos = () => {
-  const { dados, setDados, carrinho, setCarrinho } =
+  const { dados, setDados, carrinho, setCarrinho, setProduct, product } =
     React.useContext(GlobalContext);
 
-  const soma = produtos
-    .map((valor) => Number(valor.preco))
+  const valorTotal = carrinho
+    .map((item) => item.valorTotal)
+    .reduce((a, b) => a + b, 0)
+    .toFixed(2);
+
+  const quantidadeTotal = carrinho
+    .map((item) => item.quantidade)
     .reduce((a, b) => a + b, 0);
 
-  React.useEffect(() => {
-    setDados(produtos);
-  }, []);
+  const soma = product
+    .map((valor) => Number(valor.preco))
+    .reduce((a, b) => a + b, 0);
 
   return (
     <>
@@ -31,17 +36,26 @@ const Produtos = () => {
       </div>
       <section className={`${`container`} ${style.section}`}>
         <ul>
-          {dados.map((produto) => (
-            <CardProduto
-              key={produto.id}
-              produto={produto}
-              setCarrinho={setCarrinho}
-              carrinho={carrinho}
-            />
+          {product.map((produto) => (
+            <CardProduto key={produto.id} produto={produto} />
           ))}
         </ul>
         <div className={style.carrinho}>
           <Carrinho />
+          {carrinho.length ? (
+            <div>
+              <div className={style.bagTotal}>
+                <h2>Quantidade:</h2>
+                <span>{quantidadeTotal}</span>
+              </div>
+              <div className={style.bagTotal}>
+                <h2>Total:</h2>
+                <span>R$ {valorTotal}</span>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       </section>
     </>
