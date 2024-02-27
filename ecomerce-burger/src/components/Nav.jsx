@@ -2,26 +2,40 @@ import style from "./Nav.module.css";
 import produtos from "../Database/Database";
 import carrrinho from "../assets/search.png";
 
+function handleClick(nome) {
+  console.log(nome);
+}
+
 const Nav = () => {
   return (
     <>
       <nav>
         <ul>
           <li>
-            <button>Todos produtos</button>
+            <button onClick={() => handleClick("todos")}>Todos produtos</button>
           </li>
           <li>
-            <button>Hortifruti</button>
+            <button onClick={() => handleClick("Hortifruti")}>
+              Hortifruti
+            </button>
           </li>
           <li>
-            <button>Panificadora</button>
+            <button onClick={() => handleClick("Panificadora")}>
+              Panificadora
+            </button>
           </li>
           <li>
-            <button>Laticinios</button>
+            <button onClick={() => handleClick("Laticinios")}>
+              Laticinios
+            </button>
           </li>
         </ul>
         <form>
-          <input type="text" placeholder="Pesquisar por" />
+          <input
+            type="text"
+            placeholder="Pesquisar por"
+            onChange={(event) => console.log(event.target.value)}
+          />
           <button className={style.btnEnviar}>
             <img src={carrrinho} alt="" srcSet="" />
           </button>

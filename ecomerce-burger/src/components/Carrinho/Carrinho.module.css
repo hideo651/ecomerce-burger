@@ -1,0 +1,24 @@
+.carrinhoTitulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #12b886;
+  padding: 10px;
+  border-radius: 12px 12px 0 0;
+  color: white;
+  font-family: "Poppins";
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 50px;
+}
+
+.cart > h2 {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 14px;
+}
