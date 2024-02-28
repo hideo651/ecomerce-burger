@@ -5,6 +5,7 @@ import React from "react";
 import { GlobalContext } from "../context/GlobalContext";
 
 const Nav = () => {
+  const [search, setSearch] = React.useState(null);
   const { dados, setDados, product, setProduct } =
     React.useContext(GlobalContext);
 
@@ -19,6 +20,26 @@ const Nav = () => {
       });
       setProduct(filtrado);
     }
+  }
+
+  function pesquisa() {
+    const filtrado = dados.filter((item) => {
+      return item.secao.toLowerCase() === search.toLowerCase();
+    });
+
+    if (filtrado.length) {
+      setProduct(filtrado);
+    } else {
+      const filtrado = dados.filter((item) => {
+        return item.nome.toLowerCase() === search.toLowerCase();
+      });
+      setProduct(filtrado);
+    }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    pesquisa();
   }
 
   return (
@@ -42,11 +63,11 @@ const Nav = () => {
             <button onClick={() => handleClick("Laticínio")}>Laticínio</button>
           </li>
         </ul>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Pesquisar por"
-            onChange={(event) => console.log(event.target.value)}
+            onChange={(event) => setSearch(event.target.value)}
           />
           <button className={style.btnEnviar}>
             <img src={carrrinho} alt="" srcSet="" />
