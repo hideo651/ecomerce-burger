@@ -42,7 +42,7 @@ const CardProduto = ({ produto }) => {
   return (
     <>
       <li className={style.cardProduto}>
-        <div>
+        <div className={style.divImg}>
           <img src={produto.img} alt="" />
         </div>
         <div className={style.estruturaCard}>

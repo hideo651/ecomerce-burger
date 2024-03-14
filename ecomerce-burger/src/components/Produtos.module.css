@@ -21,16 +21,16 @@
   border-radius: 8px;
 }
 
-ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .section {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
 
+.section ul {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+}
 .carrinho {
   max-height: 400px;
   min-height: 400px;
@@ -43,4 +43,26 @@ ul {
   align-items: center;
   background: #fafafa;
   font-family: "Poppins";
+}
+
+@media (max-width: 900px) {
+  .infoSoma {
+    display: none;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .section > ul {
+    flex-wrap: nowrap;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .carrinho {
+    margin: 10px;
+  }
 }

@@ -8,9 +8,17 @@ nav {
   margin-right: auto;
 }
 
-ul {
+/* nav ul {
   display: flex;
   gap: 10px;
+  overflow: auto;
+} */
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; /* Alterado para overflow-x para habilitar a rolagem horizontal */
+  white-space: nowrap; /* Impede que os botões quebrem em várias linhas */
 }
 
 .btnNav > button {
@@ -54,4 +62,16 @@ form {
 .btnEnviar > img {
   display: block;
   text-align: center;
+}
+
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul {
+    width: 90%;
+    padding-bottom: 20px;
+  }
 }

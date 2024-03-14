@@ -84,3 +84,8 @@
 .btnDelete:hover {
   background: tomato;
 }
+
+
+@media(max-width:900px){
+  
+}

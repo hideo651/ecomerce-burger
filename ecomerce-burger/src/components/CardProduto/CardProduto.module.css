@@ -2,6 +2,16 @@
   background: #fafafa;
   padding: 10px;
   font-family: "Poppins";
+  width: 250px;
+  max-height: 250px;
+  border-radius: 8px;
+}
+.divImg {
+  width: 100%;
+}
+
+.divImg img {
+  width: 100%;
 }
 
 h2 {
@@ -41,4 +51,11 @@ h2 {
 .estruturaCard > button:hover {
   color: white;
   background: #12b886;
+}
+
+@media (max-width: 900px) {
+  .cardProduto {
+    min-width: 300px;
+    margin-bottom: 20px;
+  }
 }
