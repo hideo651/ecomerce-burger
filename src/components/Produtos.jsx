@@ -1,6 +1,6 @@
 import React from "react";
 import produtos from "../Database/Database";
-import alert from "../assets/alert-circle.png";
+import alert from "../../public/alert-circle.png";
 import style from "../components/Produtos.module.css";
 import CardProduto from "./CardProduto/CardProduto";
 import { GlobalContext } from "../context/GlobalContext";

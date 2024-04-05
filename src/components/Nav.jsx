@@ -1,6 +1,6 @@
 import style from "./Nav.module.css";
 import produtos from "../Database/Database";
-import carrrinho from "../assets/search.png";
+import carrrinho from "../../public/search.png";
 import React from "react";
 import { GlobalContext } from "../context/GlobalContext";
 
