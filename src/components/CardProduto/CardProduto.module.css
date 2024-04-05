@@ -1,0 +1,61 @@
+.cardProduto {
+  background: #fafafa;
+  padding: 10px;
+  font-family: "Poppins";
+  width: 250px;
+  max-height: 250px;
+  border-radius: 8px;
+}
+.divImg {
+  width: 100%;
+}
+
+.divImg img {
+  width: 100%;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infoCard > span {
+  color: #868e96;
+  font-size: 12px;
+}
+
+.estruturaCard {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: end;
+}
+
+.estruturaCard > button {
+  width: 80px;
+  padding: 10px;
+  border-radius: 8px;
+  border-style: none;
+  background: #12b8860d;
+  color: #12b886;
+  font-weight: 500;
+  font-size: 11px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.estruturaCard > button:hover {
+  color: white;
+  background: #12b886;
+}
+
+@media (max-width: 900px) {
+  .cardProduto {
+    min-width: 300px;
+    margin-bottom: 20px;
+  }
+}

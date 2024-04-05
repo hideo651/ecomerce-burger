@@ -1,0 +1,77 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* nav ul {
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+} */
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; /* Alterado para overflow-x para habilitar a rolagem horizontal */
+  white-space: nowrap; /* Impede que os botões quebrem em várias linhas */
+}
+
+.btnNav > button {
+  padding: 15px;
+  border-radius: 8px;
+  border-style: none;
+  background: #12b8860d;
+  color: #12b886;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnNav > button:hover {
+  color: white;
+  background: #12b886;
+}
+
+input {
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #f1f3f5;
+  padding: 15px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+.btnEnviar {
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  background: #12b886;
+  cursor: pointer;
+}
+
+.btnEnviar > img {
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul {
+    width: 90%;
+    padding-bottom: 20px;
+  }
+}
