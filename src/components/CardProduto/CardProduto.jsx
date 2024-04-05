@@ -6,6 +6,8 @@ import { GlobalContext } from "../../context/GlobalContext";
 const CardProduto = ({ produto }) => {
   const { dados, carrinho, setCarrinho } = React.useContext(GlobalContext);
 
+  console.log(produto.img);
+
   function handleClick(id) {
     const itemId = Number(id);
     const itemInCart = carrinho.find((item) => item.id === itemId);

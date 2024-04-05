@@ -1,8 +1,8 @@
 import React from "react";
 import { GlobalContext } from "../../context/GlobalContext";
-import bag from "../../assets/shopping-bag.png";
-import cart from "../../assets/carrinho.png";
-import trash from "../../assets/trash.png";
+import bag from "../../../public/shopping-bag.png";
+import cart from "../../../public/carrinho.png";
+import trash from "../../../public/trash.png";
 import style from "./Carrinho.module.css";
 
 const Carrinho = () => {
